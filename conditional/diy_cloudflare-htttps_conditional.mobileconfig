@@ -1,67 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>PayloadDisplayName</key>
-        <string>diyCloudflareDoHConditional</string>
-        <key>PayloadIdentifier</key>
-        <string>com.diy.dns.diyCloudflareDoHConditional</string>
-        <key>PayloadUUID</key>
-        <string>E2FB363A-3D90-4B55-9C43-706C215E42B8</string>
-        <key>PayloadDescription</key>
-        <string>Cloudflare DNS-HTTPS (Conditional)</string>
-        <key>PayloadRemovalDisallowed</key>
-        <false/>
-        <key>PayloadVersion</key>
-        <integer>1</integer>
-        <key>PayloadType</key>
-        <string>Configuration</string>
-        <key>PayloadContent</key>
-        <array>
-            <dict>
-                <key>PayloadDisplayName</key>
-                <string>Cloudflare DNS-HTTPS (Conditional)</string>
-                <key>PayloadType</key>
-                <string>com.apple.dnsSettings.managed</string>
-                <key>PayloadIdentifier</key>
-                <string>com.apple.dnsSettings.managed.25DA9D89-43C6-469F-ABBE-78AE9878E0CE</string>
-                <key>PayloadUUID</key>
-                <string>0C7FCA97-7C2F-489B-A3D7-2853D95D0441</string>
-                <key>PayloadVersion</key>
-                <integer>1</integer>
-                <key>ProhibitDisablement</key>
-                <false/>
-                <key>DNSSettings</key>
-                <dict>
-                    <key>DNSProtocol</key>
-                    <string>HTTPS</string>
-                    <key>ServerURL</key>
-                    <string>https://jdjdfkekk727737373737373737kfkkffkfkfkfk72727727383kfkfkfkfkkdkf.com</string>
-                </dict>
-                <key>OnDemandRules</key>
-                <array>
+<dict>
+	<key>PayloadContent</key>
+	<array>
+	<dict>
+			<!-- Configuration for VPNType "IPSec" -->
+			<key>IPSec</key>
+			<dict>
+			
+				<!-- AuthenticationMethod can either be "SharedSecret" or "Certificate" -->
+				
+				<!-- Configuration for AuthenticationMethod "SharedSecret" -->
+				<key>AuthenticationMethod</key>
+				<string>SharedSecret</string>
+				<key>LocalIdentifierType</key>
+				<string>KeyID</string>
+				
+				<!-- RemoteAdress should be the VPN server's IP or DNS name -->
+				<key>RemoteAddress</key>
+				<string>jfkfkfkdkdejj7372772727373733737kfkkfkfkfkfkfkk737273727kdkkdkfkfjfjfjjkd7272772.com</string>
+				
+				<!-- SharedSecret must be base64 encoded  -->
+				<key>SharedSecret</key>
+				<data>SW5zZXJ0IGJhc2U2NCBlbmNvZGVkIFNoYXJlZCBTZWNyZXQgSGVyZQ==</data>
+				
+				<!-- XAuth Configuration -->
+				<key>XAuthEnabled</key>
+				<integer>1</integer>
+				
+				<!-- XAuthName is the login name used for authentication -->
+					<!-- Remove the following two lines if you don't want the username to be stored in this file  -->
+			<key>XAuthName</key>
+				<string>Insert Username Here</string>
+				
+				<!--  XAuthPassword is the password used for authentication -->
+				<!-- Remove the following two lines if you don't want the password to be stored in this file -->
+				<key>XAuthPassword</key>
+				<string>Insert Password Here</string>
+				
+				<!-- Enabling OnDemand – This can be toggled on/off via System Settings/Network [macOS] and Settings/VPN [iOS] -->
+				<key>OnDemandEnabled</key>
+				<integer>1</integer>
+				
+				<!-- OnDemand Rules -->
+				<!-- Value for "Action" can either be "Connect", "Disconnect", "Ignore", or "EvaluateConnection" -->
+				<key>OnDemandRules</key>
+				<array>
+					<!-- Edit and/or remove any of the following dictionaries to adjust to your needs -->
+					
+					<!-- Connect if device is connected to one of the listed Wifi networks -->
+					<dict>
+						<key>Action</key>
+						<string>Connect</string>
+						<key>InterfaceTypeMatch</key>
+						<string>WiFi</string>
+						<key>SSIDMatch</key>
+						<array>
+							<!-- List one or more WiFi networks -->
+							<string>ShawGo</string>
+							<string>ShawOpen</string>
+							<string>ShawPasspoint</string>
+							<string>ShawMobileHotspot</string>
 
-                    <dict>
-                        <key>Action</key>
-                        <string>Connect</string>
-                        <key>SSIDMatch</key>
-                        <array>
-                            <string>ShawGo</string>
-                            <string>ShawOpen</string>
-                            <string>ShawPasspoint</string>
-                            <string>ShawMobileHotspot</string>
-
-                        </array>
-                    </dict>
-
-                    <dict>
-                        <key>Action</key>
-                        <string>Disconnect</string>
-                    </dict>
-
-
-                </array>
-            </dict>
-        </array>
-    </dict>
+						</array>
+					</dict>
+					
+					<!-- Default action if none of the above mentioned rules matches -->
+					<dict>
+						<key>Action</key>
+						<string>Disconnect</string>
+					</dict>
+				</array>
+			</dict>
+			
+			<!-- IPv4 Configuration -->
+			<!-- Set OverridePrimary to "1" to send all traffic through the VPN interface -->
+			<key>IPv4</key>
+			<dict>
+				<key>OverridePrimary</key>
+				<integer>1</integer>
+			</dict>
+			
+			<!-- Payload information for the file itself -->
+			<key>PayloadDescription</key>
+			<string>VPN OnDemand Settings</string>
+			<key>PayloadDisplayName</key>
+			<string>VPN</string>
+			<key>PayloadIdentifier</key>
+			<string>one.nerd.vpn.8494947c-7611-498f-9cbe-631bd9be35f6</string>
+			<key>PayloadType</key>
+			<string>one.nerd.vpn</string>
+			<key>PayloadUUID</key>
+			<string>761ec841-faae-473f-b2af-55cd6bd8374c</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Proxies</key>
+			<dict>
+				<key>HTTPEnable</key>
+				<integer>0</integer>
+				<key>HTTPSEnable</key>
+				<integer>0</integer>
+			</dict>
+			<key>UserDefinedName</key>
+			<string>VPN OnDemand</string>
+			<key>VPNType</key>
+			<string>IPSec</string>
+		</dict>
+	</array>
+	
+	<!-- Payload information for the file itself -->
+	<key>PayloadDisplayName</key>
+	<string>VPN OnDemand</string>
+	<key>PayloadIdentifier</key>
+	<string>one.nerd.vpn.a4303bdf-0857-4f61-8eac-76d6e8a81fbf</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>7e674e2c-baa6-40b9-9874-712c9be856fe</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
 </plist>
