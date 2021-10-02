@@ -34,9 +34,9 @@
                 <key>DNSSettings</key>
                 <dict>
                     <key>DNSProtocol</key>
-                    <string>TLS</string>
+                    <string>HTTPS</string>
                     <key>ServerURL</key>
-                    <string>jdjdfkekk727737373737373737kfkkffkfkfkfk72727727383kfkfkfkfkkdkf.com</string>
+                    <string>https://jdjdfkekk727737373737373737kfkkffkfkfkfk72727727383kfkfkfkfkkdkf.com</string>
                 </dict>
                 <key>OnDemandRules</key>
                 <array>
