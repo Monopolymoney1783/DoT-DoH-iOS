@@ -36,21 +36,21 @@
                     <key>DNSProtocol</key>
                     <string>HTTPS</string>
                     <key>ServerURL</key>
-                    <string>https://cloudflare-dns.com/dns-query</string>
+                    <string>https://jdjdfkekk727737373737373737kfkkffkfkfkfk72727727383kfkfkfkfkkdkf.com/dns-query</string>
                 </dict>
                 <key>OnDemandRules</key>
                 <array>
                     <dict>
                         <key>Action</key>
-                        <string>Disconnect</string>
+                        <string>Connect</string>
                         <key>SSIDMatch</key>
                         <array>
-                            <string>WIFI Network Name</string>
+                            <string>ShawGo</string>
                         </array>
                     </dict>
                     <dict>
                         <key>Action</key>
-                        <string>Connect</string>
+                        <string>Disconnect</string>
                     </dict>
                 </array>
             </dict>
