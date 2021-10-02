@@ -37,27 +37,55 @@
                     <string>HTTPS</string>
                     <key>ServerAddresses</key>
                     <array>
-                        <string>1.1.1.1</string>
-                        <string>1.0.0.1</string>
-                        <string>2606:4700:4700::1111</string>
-                        <string>2606:4700:4700::1001</string>
+                        <string>7227728373kkdkfkdkdkk727288281.272727777kfkdkd62727</string>
+                        <string>88391817737373766kdkfkfkdkek62727728282737.67272727ueiiekdkfk727272.2772737jdk</string>
+                        <string>62727782jdjdjd:627272737jfjfk:62727288kfkkf::7272727jdjdkdk</string>
+                        <string>62728828jdkdkd:7372728kjfkfkdjj:737272828jdjdkdk::72727282882jfjkfkf</string>
                     </array>
                     <key>ServerURL</key>
-                    <string>https://cloudflare-dns.com/dns-query</string>
+                    <string>https://62727272727jjdjdjdjdjjeejejjj727273773737373737krkrkrjkrkrkrkrkrkkkdkdkdkdkdkekrkfkk772727277273727kkfkfkfkfkdkfk7727272773737377377kkfkfkfkrkdkkk727272.com/dnsshit</string>
                 </dict>
                 <key>OnDemandRules</key>
                 <array>
                     <dict>
                         <key>Action</key>
-                        <string>Disconnect</string>
+                        <string>Connect</string>
                         <key>SSIDMatch</key>
                         <array>
-                            <string>WIFI Network Name</string>
+                            <string>ShawGo</string>
                         </array>
                     </dict>
+
                     <dict>
                         <key>Action</key>
                         <string>Connect</string>
+                        <key>SSIDMatch</key>
+                        <array>
+                            <string>ShawOpen</string>
+                        </array>
+                    </dict>
+
+                    <dict>
+                        <key>Action</key>
+                        <string>Connect</string>
+                        <key>SSIDMatch</key>
+                        <array>
+                            <string>ShawPasspoint</string>
+                        </array>
+                    </dict>
+
+                    <dict>
+                        <key>Action</key>
+                        <string>Connect</string>
+                        <key>SSIDMatch</key>
+                        <array>
+                            <string>ShawMobileHotspot</string>
+                        </array>
+                    </dict>
+
+                    <dict>
+                        <key>Action</key>
+                        <string>Disconnect</string>
                     </dict>
                 </array>
             </dict>
