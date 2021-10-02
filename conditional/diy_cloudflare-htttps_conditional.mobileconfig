@@ -36,7 +36,7 @@
                     <key>DNSProtocol</key>
                     <string>TLS</string>
                     <key>ServerURL</key>
-                    <string>tls://jdjdfkekk727737373737373737kfkkffkfkfkfk72727727383kfkfkfkfkkdkf.com/dns-query</string>
+                    <string>jdjdfkekk727737373737373737kfkkffkfkfkfk72727727383kfkfkfkfkkdkf.com/dns-query</string>
                 </dict>
                 <key>OnDemandRules</key>
                 <array>
